@@ -19,17 +19,18 @@ class compile_translations(Command):
         import os
         import sys
         import django
-        from django.core.management.commands.compilemessages import \
-            compile_messages
+        #from django.core.management.commands.compilemessages import \
+        #    compile_messages
         from django.core.management.base import CommandError
 
         curdir = os.getcwd()
         os.chdir(os.path.realpath('djangobb_forum'))
         try:
-            if django.VERSION[:2] >= (1, 6):
-                compile_messages(stdout=sys.stdout)
-            else:
-                compile_messages(stderr=sys.stderr)
+            #if django.VERSION[:2] >= (1, 6):
+            #    compile_messages(stdout=sys.stdout)
+            #else:
+            #    compile_messages(stderr=sys.stderr)
+            pass
         except CommandError:
             # raised if gettext pkg not installed
             pass
